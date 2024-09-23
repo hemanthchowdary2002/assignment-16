@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        background-color: aqua;
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .cd {
+        background-color: rgb(75, 3, 3);
+        height: 30vh;
+        width: 30vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+        justify-content: center;
+      }
+      .c1 {
+        background-color: gold;
+      }
+      .c2 {
+        background-color: purple;
+      }
+      .c3 {
+        background-color: antiquewhite;
+      }
+      .c4 {
+        background-color: springgreen;
+      }
+      .c5 {
+        background-color: indianred;
+      }
+      .c6 {
+        background-color: deeppink;
+      }
+      .ab {
+        background-color: rgb(6, 4, 4);
+        height: 30vh;
+        width: 30vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+      }
+      .ab1 {
+        background-color: yellow;
+        grid-column: 1/3;
+      }
+      .ab2 {
+        background-color: plum;
+        grid-column: 3/4;
+        grid-row: 1/3;
+      }
+      .ab3 {
+        background-color: springgreen;
+      }
+      .ab4 {
+        background-color: antiquewhite;
+      }
+
+      .md {
+        background-color: rgb(93, 131, 56);
+        height: 30vh;
+        width: 30vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+      }
+      .h1 {
+        background-color: yellow;
+        grid-column: 1/4;
+      }
+      .h2 {
+        background-color: indigo;
+      }
+      .h3 {
+        background-color: antiquewhite;
+        grid-column: 2/4;
+      }
+      .h4 {
+        background-color: deeppink;
+        grid-column: 1/4;
+      }
+      .md1 {
+        background-color: rgb(113, 125, 125);
+        height: 30vh;
+        width: 30vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 8px;
+      }
+      .m1 {
+        background-color: yellow;
+        grid-column: 1/3;
+      }
+      .m2 {
+        background-color: springgreen;
+        grid-column: 3/5;
+      }
+      .m3 {
+        background-color: antiquewhite;
+        grid-column: 1/2;
+      }
+      .m4 {
+        background-color: purple;
+        grid-column: 2/5;
+      }
+      .m5 {
+        background-color: indigo;
+        grid-column: 1/5;
+      }
+      .md2 {
+        background-color: rgb(28, 28, 216);
+        height: 30vh;
+        width: 30vw;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+      }
+      .e1 {
+        background-color: yellow;
+      }
+      .e2 {
+        background-color: antiquewhite;
+      }
+      .e3 {
+        background-color: purple;
+      }
+      .e4 {
+        background-color: springgreen;
+      }
+      .e5 {
+        background-color: brown;
+      }
+      .e6 {
+        background-color: pink;
+      }
+      .e7 {
+        background-color: red;
+      }
+      .e8 {
+        background-color: darkorange;
+      }
+      .e9 {
+        background-color: yellowgreen;
+      }
+      .e10 {
+        background-color: wheat;
+      }
+      .e11 {
+        background-color: darkred;
+      }
+      .e12 {
+        background-color: black;
+      }
+      .e13 {
+        background-color: violet;
+      }
+      .e14 {
+        background-color: turquoise;
+      }
+      .e15 {
+        background-color: tomato;
+      }
+      .e16 {
+        background-color: cyan;
+      }
+      .e17 {
+        background-color: olive;
+      }
+      .e18 {
+        background-color: lavender;
+      }
+      .hm {
+        background-color: rgb(195, 116, 131);
+        height: 30vh;
+        width: 30vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 8px;
+      }
+      .q1 {
+        background-color: yellow;
+        grid-column: 1/3;
+      }
+      .q2 {
+        background-color: antiquewhite;
+      }
+      .q3 {
+        background-color: purple;
+      }
+      .q4 {
+        background-color: deepskyblue;
+      }
+      .q5 {
+        background-color: indigo;
+      }
+      .q6 {
+        background-color: springgreen;
+      }
+      .q7 {
+        background-color: black;
+        grid-column: 1/3;
+        grid-row: 3/5;
+      }
+      .q8 {
+        /*background-color: plum;*/
+      }
+      .q9 {
+        background-color: orangered;
+      }
+      .q10 {
+        background-color: blueviolet;
+      }
+      .q11 {
+        background-color: gold;
+      }
+      .q12 {
+        background-color: olive;
+        grid-column: 1/4;
+      }
+      .q13 {
+        background-color: darkblue;
+      }
+      .hm2 {
+        background-color: deeppink;
+        height: 30vh;
+        width: 30vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 8px;
+      }
+      .f1 {
+        background-color: yellow;
+        grid-column: 1/3;
+      }
+      .f2 {
+        background-color: black;
+        grid-column: 3/5;
+      }
+      .f3 {
+        background-color: springgreen;
+        grid-column: 1/3;
+        grid-row: 2/4;
+      }
+      .f4 {
+        background-color: aliceblue;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat 1fr 1fr;
+        height: 198%;
+        width: 198%;
+        gap: 8px;
+        border: 3px solid white;
+        border-width: 2px;
+      }
+      .ff1 {
+        background-color: indigo;
+        grid-column: 1/3;
+      }
+      .ff2 {
+        background-color: purple;
+      }
+      .ff3 {
+        background-color: orange;
+      }
+      .hm3 {
+        background-color: red;
+        height: 30vh;
+        width: 30vw;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap:8px ;
+      }
+      .hh1{
+        background-color: yellow;
+      }
+      .hh2{
+        background-color: springgreen;
+      }
+      .hh3{
+        background-color: black;
+      }
+      .hh4{
+        background-color: antiquewhite;
+      }
+      .hh5{
+        background-color: grey;
+
+      }
+      .hh6{
+        background-color: darkslateblue;
+      }
+      .hh7{
+        background-color: paleturquoise;
+      }
+      .hh8{
+        background-color: blue;
+        grid-column: 3/6;
+      }
+      .hh9{
+        background-color: forestgreen;
+        grid-column: 1/6;
+      }
+      .dd {
+        background-color: plum;
+        display: grid;
+        height: 30vh;
+        width: 30vw;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3,1fr);
+        gap: 8px;
+      }
+      .d1{
+        background-color: yellow;
+        grid-column: 1/4;
+      }
+      .d2{
+        background-color: black;
+        grid-row: 2/4;
+      }
+      .d3{
+        background-color: antiquewhite;
+        grid-column:2/4;
+      }
+      .d4{
+        background-color: brown;
+      }
+      .d5{
+        background-color: lawngreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="cd">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+        <div class="c5"></div>
+        <div class="c6"></div>
+      </div>
+      <div class="ab">
+        <div class="ab1"></div>
+        <div class="ab2"></div>
+        <div class="ab3"></div>
+        <div class="ab4"></div>
+      </div>
+      <div class="md">
+        <div class="h1"></div>
+        <div class="h2"></div>
+        <div class="h3"></div>
+        <div class="h4"></div>
+      </div>
+      <div class="md1">
+        <div class="m1"></div>
+        <div class="m2"></div>
+        <div class="m3"></div>
+        <div class="m4"></div>
+        <div class="m5"></div>
+      </div>
+      <div class="md2">
+        <div class="e1"></div>
+        <div class="e2"></div>
+        <div class="e3"></div>
+        <div class="e4"></div>
+        <div class="e5"></div>
+        <div class="e6"></div>
+        <div class="e7"></div>
+        <div class="e8"></div>
+        <div class="e9"></div>
+        <div class="e10"></div>
+        <div class="e11"></div>
+        <div class="e12"></div>
+        <div class="e13"></div>
+        <div class="e14"></div>
+        <div class="e15"></div>
+        <div class="e16"></div>
+        <div class="e17"></div>
+        <div class="e18"></div>
+      </div>
+      <div class="hm">
+        <div class="q1"></div>
+        <div class="q2"></div>
+        <div class="q3"></div>
+        <div class="q4"></div>
+        <div class="q5"></div>
+        <div class="q6"></div>
+        <div class="q7"></div>
+        <div class="q8"></div>
+        <div class="q9"></div>
+        <div class="q10"></div>
+        <div class="q11"></div>
+        <div class="q12"></div>
+        <div class="q13"></div>
+      </div>
+      <div class="hm2">
+        <div class="f1"></div>
+        <div class="f2"></div>
+        <div class="f3"></div>
+        <div class="f4">
+          <div class="ff1"></div>
+          <div class="ff2"></div>
+          <div class="ff3"></div>
+        </div>
+      </div>
+      <div class="hm3">
+        <div class="hh1"></div>
+        <div class="hh2"></div>
+        <div class="hh3"></div>
+        <div class="hh4"></div>
+        <div class="hh5"></div>
+        <div class="hh6"></div>
+        <div class="hh7"></div>
+        <div class="hh8"></div>
+        <div class="hh9"></div>
+      </div>
+      <div class="dd">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div class="d4"></div>
+        <div class="d5"></div>
+      </div>
+    </div>
+  </body>
+</html>
